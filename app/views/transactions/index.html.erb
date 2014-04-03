@@ -1,0 +1,42 @@
+
+<% if @total %>
+<div class="message">
+<p>The the total amount gross are <%= @total %>. Check Transaction List </p>
+</div>
+<% end %>
+<%= link_to 'Regresar', root_url %>
+<div class="accordion">
+<% 	  #define a list of transaction with purchaser and merchant
+	@transactions = Transaction.all.includes(:purchaser).includes(:merchant) 
+	if @transactions %>
+<h3>Transactions List</h3>
+<div>
+<table>
+  <thead>
+    <tr>
+      <th>purchaser_name</th>
+      <th>item_description</th>
+      <th>item_price</th>
+      <th>purchase_count</th>
+      <th>merchant_address</th>
+      <th>merchant_name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @transactions.each  do |trans| %>
+      <tr>
+        <td><%= trans.purchaser.name %></td>
+        <td><%= trans.item_description %></td>
+        <td><%= trans.item_price %></td>
+        <td><%= trans.purchase_count %></td>
+        <td><%= trans.merchant.address %></td>
+        <td><%= trans.merchant.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<% end %>
+</div>
+

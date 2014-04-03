@@ -1,0 +1,39 @@
+== README
+
+
+
+Things you may want to cover:
+
+Ruby 2.0
+Rails 4.0.4
+style: jquery-ui
+
+Installation 
+
+1.) execute: cd ..golazzos
+2.) edit config/database.yml and Gemfile if you want to change database configuration or another configuration
+3.) execute: bundle install
+4.) execute: rake db:migrate
+ 
+Instructions
+
+1.) execute: rails s
+2.) go to the browser: 0.0.0.0:3000/
+3.) upload the file and click in create transaction
+ 
+
+Controllers:
+Transaction Controller: (read the file and create a new instance of transaction Model into a bucle)
+
+Models:
+Transaction Model (defines the relationship and call the constructor of the other model if is necessary)
+purchase Model
+merchant Model
+
+Views:
+new (form to upload the file and list of transactions)
+index (list of transaction and total of purchase)
+
+
+
+<tt>rake doc:app</tt>.
