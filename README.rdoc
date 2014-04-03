@@ -10,7 +10,7 @@ style: jquery-ui
 
 Installation 
 
-1.) execute: cd ..golazzos
+1.) execute: cd ..golazzos(or app name)
 2.) edit config/database.yml and Gemfile if you want to change database configuration or another configuration
 3.) execute: bundle install
 4.) execute: rake db:migrate
